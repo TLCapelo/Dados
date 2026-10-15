@@ -82,7 +82,7 @@ class TestTransformers:
         cleaned = cleaner.clean_clima_daily(raw)
         assert len(cleaned) == 1
         assert cleaned[0]["city"] == "São Paulo"
-        assert isinstance(cleaned[0]["date"], str)  # Mantém como string ISO
+        assert cleaned[0]["date"].isoformat() == "2024-01-15"
     
     def test_clean_crypto_market(self):
         config = load_config()
@@ -93,6 +93,8 @@ class TestTransformers:
             "symbol": "BTC",
             "name": "Bitcoin",
             "date": "2024-01-15",
+            "extracted_at": "2024-01-15T12:00:00Z",
+            "vs_currency": "brl",
             "brl_current_price": 200000.0,
             "brl_market_cap": 3900000000000.0,
         }]

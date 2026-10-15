@@ -83,20 +83,20 @@ class DataCleaner:
             df["last_updated"] = pd.to_datetime(df["last_updated"], errors="coerce")
         
         # Colunas numéricas
-            numeric_cols = [c for c in df.columns if c not in ["coin_id", "symbol", "name", "date", "extracted_at", "last_updated", "vs_currency"]]
+        numeric_cols = [c for c in df.columns if c not in ["coin_id", "symbol", "name", "date", "extracted_at", "last_updated", "vs_currency"]]
         for col in numeric_cols:
             df[col] = pd.to_numeric(df[col], errors="coerce")
         
-            # Substitui inf/-inf por NaN
-            df = df.replace([np.inf, -np.inf], np.nan)
+        # Substitui inf/-inf por NaN
+        df = df.replace([np.inf, -np.inf], np.nan)
         
-            # Remove duplicatas
-            df = df.drop_duplicates(subset=["coin_id", "date", "vs_currency"], keep="last")
+        # Remove duplicatas
+        df = df.drop_duplicates(subset=["coin_id", "date", "vs_currency"], keep="last")
         
-            # Ordena
-            df = df.sort_values(["coin_id", "date", "vs_currency"]).reset_index(drop=True)
+        # Ordena
+        df = df.sort_values(["coin_id", "date", "vs_currency"]).reset_index(drop=True)
         
-            return df.to_dict("records")
+        return df.to_dict("records")
     
     def clean_crypto_history(self, raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Limpa dados históricos de crypto."""

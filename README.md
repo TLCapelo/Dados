@@ -162,6 +162,7 @@ Após o primeiro deploy (aguarde ~15 min após push):
 
 ### Executar Testes
 ```bash
+pip install pytest
 pytest tests/ -v
 ```
 
