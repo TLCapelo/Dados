@@ -1,0 +1,183 @@
+# Medidas DAX Sugeridas para o Dashboard
+
+## ==========================================
+## CLIMA
+## ==========================================
+
+// Temperatura média ponderada por população (se tiver pop)
+Temp_Media_Ponderada = 
+DIVIDE(
+    SUMX(Fato_Clima_Diario, Fato_Clima_Diario[temp_mean] * Dim_Cidade[populacao]),
+    SUM(Dim_Cidade[populacao])
+)
+
+// Amplitude térmica média
+Temp_Amplitude_Media = AVERAGE(Fato_Clima_Diario[temp_amplitude])
+
+// Dias com chuva (%)
+Pct_Dias_Chuva = 
+DIVIDE(
+    CALCULATE(COUNTROWS(Fato_Clima_Diario), Fato_Clima_Diario[precipitation_sum] > 0),
+    COUNTROWS(Fato_Clima_Diario)
+)
+
+// Precipitação total no período
+Precip_Total = SUM(Fato_Clima_Diario[precipitation_sum])
+
+// UV Index máximo
+UV_Max = MAX(Fato_Clima_Diario[uv_index_max])
+
+// Variação de temperatura vs média histórica (7 dias)
+Temp_vs_Media_7d = 
+VAR Media7d = CALCULATE(AVERAGE(Fato_Clima_Diario[temp_mean]), 
+    DATESINPERIOD(Dim_Data[date], MAX(Dim_Data[date]), -7, DAY))
+RETURN
+AVERAGE(Fato_Clima_Diario[temp_mean]) - Media7d
+
+// Alerta de onda de calor (temp > 35°C por 3+ dias)
+Alerta_Onda_Calor = 
+VAR Consecutivos = 
+    CALCULATE(
+        COUNTROWS(Fato_Clima_Diario),
+        Fato_Clima_Diario[temp_max] > 35,
+        DATESINPERIOD(Dim_Data[date], MAX(Dim_Data[date]), -3, DAY)
+    )
+RETURN
+IF(Consecutivos >= 3, "⚠️ Onda de Calor", "✅ Normal")
+
+
+## ==========================================
+## CRYPTO
+## ==========================================
+
+// Preço médio ponderado por volume (VWAP simplificado)
+Preco_VWAP_24h = 
+DIVIDE(
+    SUMX(Fato_Crypto_Market, Fato_Crypto_Market[price_brl] * Fato_Crypto_Market[volume_brl]),
+    SUM(Fato_Crypto_Market[volume_brl])
+)
+
+// Market Cap Total (BRL)
+Market_Cap_Total_BRL = SUM(Fato_Crypto_Market[market_cap_brl])
+
+// Dominância do Bitcoin
+BTC_Dominance = 
+DIVIDE(
+    CALCULATE(SUM(Fato_Crypto_Market[market_cap_brl]), Dim_Moeda[symbol] = "BTC"),
+    [Market_Cap_Total_BRL]
+)
+
+// Variação 24h média ponderada
+Var_24h_Ponderada = 
+DIVIDE(
+    SUMX(Fato_Crypto_Market, Fato_Crypto_Market[change_24h] * Fato_Crypto_Market[market_cap_brl]),
+    SUM(Fato_Crypto_Market[market_cap_brl])
+)
+
+// Top Gainers (maior alta 24h)
+Top_Gainers = 
+TOPN(5, 
+    SUMMARIZE(Fato_Crypto_Market, Dim_Moeda[symbol], "Var24h", SUM(Fato_Crypto_Market[change_24h])),
+    [Var24h], DESC
+)
+
+// Top Losers (maior queda 24h)
+Top_Losers = 
+TOPN(5, 
+    SUMMARIZE(Fato_Crypto_Market, Dim_Moeda[symbol], "Var24h", SUM(Fato_Crypto_Market[change_24h])),
+    [Var24h], ASC
+)
+
+// Distância do ATH (%)
+Pct_From_ATH = AVERAGE(Fato_Crypto_Market[pct_from_ath])
+
+// Volume/Market Cap Ratio (Liquidez)
+Liquidez_Media = AVERAGE(Fato_Crypto_Market[volume_market_cap_ratio])
+
+
+## ==========================================
+## ECONOMIA
+## ==========================================
+
+// Selic Atual
+Selic_Atual = 
+CALCULATE(
+    LASTNONBLANKVALUE(Dim_Data[date], AVERAGE(Fato_Economia[value])),
+    Dim_Serie_Economica[series_code] = 11
+)
+
+// IPCA Acumulado 12m
+IPCA_12m = 
+CALCULATE(
+    PRODUCTX(
+        FILTER(Fato_Economia, Dim_Serie_Economica[series_code] = 433),
+        1 + Fato_Economia[value] / 100
+    ) - 1
+) * 100
+
+// Dólar Atual
+Dolar_Atual = 
+CALCULATE(
+    LASTNONBLANKVALUE(Dim_Data[date], AVERAGE(Fato_Economia[value])),
+    Dim_Serie_Economica[series_code] = 1
+)
+
+// Variação Cambial 30d
+Var_Cambio_30d = 
+VAR Atual = [Dolar_Atual]
+VAR Passado = 
+    CALCULATE(
+        LASTNONBLANKVALUE(Dim_Data[date], AVERAGE(Fato_Economia[value])),
+        Dim_Serie_Economica[series_code] = 1,
+        DATEADD(Dim_Data[date], -30, DAY)
+    )
+RETURN
+DIVIDE(Atual - Passado, Passado) * 100
+
+// Alerta de séries econômicas
+Alerta_Economico = 
+CONCATENATEX(
+    FILTER(Fato_Economia, Fato_Economia[alert] = "Alerta"),
+    Dim_Serie_Economica[series_name] & ": " & FORMAT(Fato_Economia[value], "#,##0.00") & " (" & FORMAT(Fato_Economia[z_score_30d], "+#.##;-#.##") & "σ)",
+    " | "
+)
+
+
+## ==========================================
+## CRUZAMENTOS (INSIGHTS)
+## ==========================================
+
+// Correlação Temp vs Crypto (exemplo simplificado)
+Correl_Temp_BTC = 
+VAR TempSeries = CALCULATETABLE(VALUES(Fato_Clima_Diario[temp_mean]), Dim_Cidade[city] = "São Paulo")
+VAR BTCSeries = CALCULATETABLE(VALUES(Fato_Crypto_Market[price_brl]), Dim_Moeda[symbol] = "BTC")
+RETURN
+// Requer cálculo mais complexo com CORREL ou R/Python visual
+
+// Índice de Conforto vs Atividade Crypto
+// Hipótese: dias mais agradáveis = mais trading?
+Conforto_vs_Volume = 
+DIVIDE(
+    SUMX(Fato_Clima_Diario, Fato_Clima_Diario[heat_index] * Fato_Crypto_Market[volume_brl]),
+    SUM(Fato_Crypto_Market[volume_brl])
+)
+
+
+## ==========================================
+## TIME INTELLIGENCE
+## ==========================================
+
+// YTD, MTD, QTD para qualquer medida
+Vendas_YTD = TOTALYTD([Medida], Dim_Data[date])
+Vendas_MTD = TOTALMTD([Medida], Dim_Data[date])
+Vendas_QTD = TOTALQTD([Medida], Dim_Data[date])
+
+// Same Period Last Year
+SPLY = CALCULATE([Medida], SAMEPERIODLASTYEAR(Dim_Data[date]))
+
+// YoY Growth
+YoY_Growth = DIVIDE([Medida] - [SPLY], [SPLY])
+
+// Rolling 7/30 days
+Rolling_7d = CALCULATE([Medida], DATESINPERIOD(Dim_Data[date], MAX(Dim_Data[date]), -7, DAY))
+Rolling_30d = CALCULATE([Medida], DATESINPERIOD(Dim_Data[date], MAX(Dim_Data[date]), -30, DAY))

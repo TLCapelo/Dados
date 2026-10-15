@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-10-15T16:33:09.348272",
+  "source": "data-pipeline-estudo",
+  "tables": {
+    "clima_diario": {
+      "name": "clima_diario",
+      "row_count": 30,
+      "column_count": 30,
+      "columns": [
+        {
+          "name": "city",
+          "type": "object",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            "Manaus",
+            "Manaus",
+            "Manaus"
+          ],
+          "unique_count": 10
+        }
+      ],
+      "date_range": {
+        "min": "2026-10-14 00:00:00",
+        "max": "2026-10-16 00:00:00"
+      }
+    },
+    "clima_horario": {
+      "name": "clima_horario",
+      "row_count": 720,
+      "column_count": 22,
+      "columns": [
+        {
+          "name": "city",
+          "type": "object",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            "Manaus",
+            "Manaus",
+            "Manaus"
+          ],
+          "unique_count": 10
+        }
+      ],
+      "date_range": {
+        "min": "2026-10-14 00:00:00",
+        "max": "2026-10-16 23:00:00"
+      }
+    },
+    "crypto_market": {
+      "name": "crypto_market",
+      "row_count": 18,
+      "column_count": 30,
+      "columns": [
+        {
+          "name": "coin_id",
+          "type": "object",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            "binancecoin",
+            "binancecoin",
+            "bitcoin"
+          ],
+          "unique_count": 9
+        }
+      ],
+      "date_range": {
+        "min": "2026-10-15 16:30:46.985099",
+        "max": "2026-10-15 16:30:46.985099"
+      }
+    },
+    "crypto_historico": {
+      "name": "crypto_historico",
+      "row_count": 240,
+      "column_count": 7,
+      "columns": [
+        {
+          "name": "coin_id",
+          "type": "object",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            "binancecoin",
+            "binancecoin",
+            "binancecoin"
+          ],
+          "unique_count": 8
+        }
+      ],
+      "date_range": {
+        "min": "2026-09-16 00:00:00",
+        "max": "2026-10-15 16:30:00"
+      }
+    },
+    "economia_diario": {
+      "name": "economia_diario",
+      "row_count": 324,
+      "column_count": 19,
+      "columns": [
+        {
+          "name": "series_code",
+          "type": "int64",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            1,
+            1,
+            1
+          ],
+          "unique_count": 15
+        }
+      ],
+      "date_range": {
+        "min": null,
+        "max": null
+      }
+    }
+  }
+}
