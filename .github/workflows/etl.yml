@@ -13,6 +13,10 @@ on:
       - 'config.yaml'
       - 'requirements.txt'
 
+concurrency:
+  group: daily-data-pipeline-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write  # Necessário para push no gh-pages
   pages: write
@@ -67,7 +71,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           git commit -m "chore(data): atualização diária $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push origin main
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
       
       - name: Deploy to GitHub Pages
         if: steps.changes.outputs.changed == 'true'
