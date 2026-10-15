@@ -6,7 +6,7 @@ Os dados estão disponíveis em formato CSV e Parquet no GitHub Pages.
 
 ## URLs de Acesso (após deploy no GitHub Pages)
 
-Base URL: `https://tlcapelo.github.io/Dados/data/serving/`
+Base URL: `https://tlcapelo.github.io/Dados/`
 
 ### Arquivos CSV (Recomendado para Power BI Web Connector)
 - Clima Diário: `powerbi/clima_diario.csv`
@@ -26,7 +26,7 @@ Base URL: `https://tlcapelo.github.io/Dados/data/serving/`
 
 ### Opção 1: Web Connector (Mais Simples)
 1. Power BI Desktop → Obter Dados → Web
-2. Cole a URL completa do CSV (ex: `https://usuario.github.io/repo/data/serving/powerbi/clima_diario.csv`)
+2. Cole a URL completa do CSV (ex: `https://usuario.github.io/repo/powerbi/clima_diario.csv`)
 3. Power BI detecta automaticamente o CSV
 4. Repita para cada tabela necessária
 
