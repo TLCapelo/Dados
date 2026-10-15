@@ -1,0 +1,282 @@
+# Configuração do Pipeline de Dados - Estudo
+# Edite este arquivo para ajustar parâmetros sem mexer no código
+
+# ==========================================
+# OPEN-METEO (Clima)
+# ==========================================
+open_meteo:
+  base_url: "https://api.open-meteo.com/v1/forecast"
+  # Cidades brasileiras para monitorar (lat, lon, nome, estado)
+  cities:
+    - name: "São Paulo"
+      state: "SP"
+      latitude: -23.5505
+      longitude: -46.6333
+    - name: "Rio de Janeiro"
+      state: "RJ"
+      latitude: -22.9068
+      longitude: -43.1729
+    - name: "Brasília"
+      state: "DF"
+      latitude: -15.7975
+      longitude: -47.8825
+    - name: "Florianópolis"
+      state: "SC"
+      latitude: -27.5954
+      longitude: -48.5480
+    - name: "Fortaleza"
+      state: "CE"
+      latitude: -3.7319
+      longitude: -38.5267
+    - name: "Manaus"
+      state: "AM"
+      latitude: -3.1190
+      longitude: -60.0217
+    - name: "Porto Alegre"
+      state: "RS"
+      latitude: -30.0346
+      longitude: -51.2177
+    - name: "Belo Horizonte"
+      state: "MG"
+      latitude: -19.9167
+      longitude: -43.9345
+    - name: "Salvador"
+      state: "BA"
+      latitude: -12.9714
+      longitude: -38.5014
+    - name: "Recife"
+      state: "PE"
+      latitude: -8.0476
+      longitude: -34.8770
+  
+  # Variáveis climáticas a coletar (diárias)
+  daily_variables:
+    - "temperature_2m_max"
+    - "temperature_2m_min"
+    - "temperature_2m_mean"
+    - "precipitation_sum"
+    - "rain_sum"
+    - "snowfall_sum"
+    - "windspeed_10m_max"
+    - "windgusts_10m_max"
+    - "winddirection_10m_dominant"
+    - "shortwave_radiation_sum"
+    - "et0_fao_evapotranspiration"
+    - "relative_humidity_2m_mean"
+    - "surface_pressure_mean"
+    - "cloudcover_mean"
+    - "uv_index_max"
+    - "precipitation_probability_max"
+  
+  # Variáveis horárias (opcional, mais dados)
+  hourly_variables:
+    - "temperature_2m"
+    - "relative_humidity_2m"
+    - "precipitation"
+    - "rain"
+    - "windspeed_10m"
+    - "winddirection_10m"
+    - "surface_pressure"
+    - "cloudcover"
+    - "uv_index"
+  
+  timezone: "America/Sao_Paulo"
+  forecast_days: 2  # Pega hoje + ontem (para garantir histórico)
+  past_days: 1
+
+# ==========================================
+# COINGECKO (Criptomoedas)
+# ==========================================
+coingecko:
+  base_url: "https://api.coingecko.com/api/v3"
+  # Moedas para monitorar (id da CoinGecko)
+  coins:
+    - id: "bitcoin"
+      symbol: "BTC"
+      name: "Bitcoin"
+    - id: "ethereum"
+      symbol: "ETH"
+      name: "Ethereum"
+    - id: "binancecoin"
+      symbol: "BNB"
+      name: "BNB"
+    - id: "solana"
+      symbol: "SOL"
+      name: "Solana"
+    - id: "ripple"
+      symbol: "XRP"
+      name: "XRP"
+    - id: "cardano"
+      symbol: "ADA"
+      name: "Cardano"
+    - id: "dogecoin"
+      symbol: "DOGE"
+      name: "Dogecoin"
+    - id: "polkadot"
+      symbol: "DOT"
+      name: "Polkadot"
+    - id: "polygon"
+      symbol: "MATIC"
+      name: "Polygon"
+    - id: "litecoin"
+      symbol: "LTC"
+      name: "Litecoin"
+  
+  # Moedas fiat para conversão
+  vs_currencies: ["brl", "usd"]
+  
+  # Dados de mercado a coletar
+  market_data:
+    - "current_price"
+    - "market_cap"
+    - "total_volume"
+    - "price_change_percentage_24h"
+    - "price_change_percentage_7d"
+    - "price_change_percentage_30d"
+    - "circulating_supply"
+    - "total_supply"
+    - "max_supply"
+    - "ath"
+    - "ath_change_percentage"
+    - "atl"
+    - "atl_change_percentage"
+    - "last_updated"
+  
+  # Histórico de preços (dias)
+  price_history_days: 30
+  
+  # Rate limit: 10-30 req/min no free tier (sem API key)
+  # Com API key gratuita no site da CoinGecko: 50-100 req/min
+  rate_limit_per_minute: 10
+
+# ==========================================
+# BCB/SGS (Banco Central do Brasil)
+# ==========================================
+bcb:
+  base_url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs"
+  # Séries do SGS (Sistema Gerenciador de Séries Temporais)
+  series:
+    - code: 11
+      name: "selic"
+      description: "Taxa Selic (% a.a.)"
+      unit: "percentual_aa"
+    - code: 432
+      name: "selic_diaria"
+      description: "Taxa Selic diária (% a.d.)"
+      unit: "percentual_ad"
+    - code: 4390
+      name: "cdi"
+      description: "Taxa CDI (% a.a.)"
+      unit: "percentual_aa"
+    - code: 12
+      name: "poupanca"
+      description: "Poupança (% a.m.)"
+      unit: "percentual_am"
+    - code: 1
+      name: "dolar_venda"
+      description: "Dólar venda (R$)"
+      unit: "reais"
+    - code: 21619
+      name: "dolar_compra"
+      description: "Dólar compra (R$)"
+      unit: "reais"
+    - code: 21620
+      name: "euro_venda"
+      description: "Euro venda (R$)"
+      unit: "reais"
+    - code: 21621
+      name: "euro_compra"
+      description: "Euro compra (R$)"
+      unit: "reais"
+    - code: 433
+      name: "ipca"
+      description: "IPCA (% a.m.)"
+      unit: "percentual_am"
+    - code: 13522
+      name: "igpm"
+      description: "IGP-M (% a.m.)"
+      unit: "percentual_am"
+    - code: 27838
+      name: "pib_mensal"
+      description: "PIB mensal (R$ milhões)"
+      unit: "milhoes_reais"
+    - code: 24369
+      name: "desemprego"
+      description: "Taxa de desemprego (%)"
+      unit: "percentual"
+    - code: 28763
+      name: "divida_bruta"
+      description: "Dívida bruta do governo geral (% PIB)"
+      unit: "percentual_pib"
+    - code: 28764
+      name: "divida_liquida"
+      description: "Dívida líquida do setor público (% PIB)"
+      unit: "percentual_pib"
+    - code: 20786
+      name: "reservas_internacionais"
+      description: "Reservas internacionais (US$ milhões)"
+      unit: "milhoes_usd"
+  
+  # Formato de data para a API
+  date_format: "%d/%m/%Y"
+  
+  # Quantos dias para trás buscar (para atualização incremental)
+  lookback_days: 60
+
+# ==========================================
+# PIPELINE SETTINGS
+# ==========================================
+pipeline:
+  # Diretórios de dados
+  paths:
+    raw: "data/raw"
+    staging: "data/staging"
+    serving: "data/serving"
+  
+  # Formato de saída
+  output_format: "parquet"  # parquet ou csv
+  partition_by: "date"  # Particionamento por data
+  
+  # Validação
+  validation:
+    enabled: true
+    fail_on_error: false  # Se true, para o pipeline em erro de validação
+  
+  # Logs
+  logging:
+    level: "INFO"
+    file: "logs/pipeline.log"
+  
+  # GitHub Pages / Deploy
+  deploy:
+    enabled: true
+    branch: "gh-pages"
+    serving_path: "data/serving"
+
+# ==========================================
+# POWER BI SETTINGS
+# ==========================================
+powerbi:
+  # Configuração para conexão no Power BI
+  dataset_name: "Estudo_Dados_Diarios"
+  # URL base para acessar os dados no GitHub Pages
+  # Será preenchido após primeiro deploy: https://<user>.github.io/<repo>/data/serving/
+  github_pages_base_url: "https://tlcapelo.github.io/Dados/data/serving/"
+  
+  # Tabelas esperadas no modelo
+  tables:
+    - name: "clima_diario"
+      source: "serving/clima/diario/*.parquet"
+      key: ["city", "state", "date"]
+    - name: "clima_horario"
+      source: "serving/clima/horario/*.parquet"
+      key: ["city", "state", "datetime"]
+    - name: "crypto_diario"
+      source: "serving/crypto/diario/*.parquet"
+      key: ["coin_id", "date"]
+    - name: "crypto_historico"
+      source: "serving/crypto/historico/*.parquet"
+      key: ["coin_id", "date"]
+    - name: "economia_diario"
+      source: "serving/economia/diario/*.parquet"
+      key: ["series_code", "date"]

@@ -1,0 +1,13 @@
+# Core
+requests==2.31.0
+pandas==2.3.3
+pyarrow==26.0.0
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Data Quality (optional - install separately if needed)
+# great-expectations==0.18.12
+
+# Utilities
+tqdm==4.66.1
+tenacity==8.2.3
