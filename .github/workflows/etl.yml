@@ -71,9 +71,16 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           git commit -m "chore(data): atualização diária $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase -X theirs origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+
+          echo "Falha ao publicar os dados após 3 tentativas." >&2
+          exit 1
       
       - name: Deploy to GitHub Pages
         if: steps.changes.outputs.changed == 'true'
