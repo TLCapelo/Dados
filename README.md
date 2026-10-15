@@ -143,7 +143,7 @@ data-pipeline-estudo/
 Após o primeiro deploy (aguarde ~15 min após push):
 
 1. **Power BI Desktop** → Obter Dados → **Web**
-2. Cole a URL: `https://tlcapelo.github.io/Dados/data/serving/powerbi/clima_diario.csv`
+2. Cole a URL: `https://tlcapelo.github.io/Dados/powerbi/clima_diario.csv`
 3. Repita para: `crypto_market.csv`, `economia_diario.csv`
 4. Modele relacionamentos usando `Dim_Data`, `Dim_Cidade`, `Dim_Moeda`, `Dim_Serie_Economica`
 5. Use as medidas DAX do arquivo `dax_measures.txt`

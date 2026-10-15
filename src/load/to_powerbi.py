@@ -195,7 +195,7 @@ Base URL: `{self.github_pages_url or 'https://<SEU_USUARIO>.github.io/<SEU_REPO>
 
 ### Opção 1: Web Connector (Mais Simples)
 1. Power BI Desktop → Obter Dados → Web
-2. Cole a URL completa do CSV (ex: `https://usuario.github.io/repo/data/serving/powerbi/clima_diario.csv`)
+2. Cole a URL completa do CSV (ex: `https://usuario.github.io/repo/powerbi/clima_diario.csv`)
 3. Power BI detecta automaticamente o CSV
 4. Repita para cada tabela necessária
 

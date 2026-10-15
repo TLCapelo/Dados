@@ -261,7 +261,7 @@ powerbi:
   dataset_name: "Estudo_Dados_Diarios"
   # URL base para acessar os dados no GitHub Pages
   # Será preenchido após primeiro deploy: https://<user>.github.io/<repo>/data/serving/
-  github_pages_base_url: "https://tlcapelo.github.io/Dados/data/serving/"
+  github_pages_base_url: "https://tlcapelo.github.io/Dados/"
   
   # Tabelas esperadas no modelo
   tables:
