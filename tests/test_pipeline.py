@@ -53,7 +53,7 @@ class TestExtractors:
         config = load_config()
         extractor = CoinGeckoExtractor(config["coingecko"])
         assert extractor.base_url == "https://api.coingecko.com/api/v3"
-        assert len(extractor.coins) == 10
+        assert len(extractor.coins) == 7
     
     def test_bcb_extractor_init(self):
         config = load_config()
