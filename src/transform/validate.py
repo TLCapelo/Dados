@@ -59,10 +59,16 @@ class DataValidator:
                 elif exp_type == "between":
                     min_val = kwargs.get("min_value")
                     max_val = kwargs.get("max_value")
-                    out_of_bounds = ((df[column] < min_val) | (df[column] > max_val)).sum()
+                    # "where" restringe a checagem a um subconjunto (ex.: uma serie)
+                    where = exp.get("where") or {}
+                    alvo = df
+                    for chave, valor in where.items():
+                        alvo = alvo[alvo[chave] == valor]
+                    out_of_bounds = ((alvo[column] < min_val) | (alvo[column] > max_val)).sum()
                     success = out_of_bounds == 0
+                    filtro = f" onde {where}" if where else ""
                     results.append({
-                        "expectation": f"between({column}, {min_val}, {max_val})",
+                        "expectation": f"between({column}, {min_val}, {max_val}){filtro}",
                         "success": success,
                         "observed_value": f"{out_of_bounds} fora do intervalo",
                         "details": {"out_of_bounds": int(out_of_bounds), "min": min_val, "max": max_val}
@@ -230,10 +236,13 @@ class DataValidator:
         
         # Validações específicas por série
         series_ranges = {
-            11: {"min": 0, "max": 100},      # Selic
-            432: {"min": 0, "max": 1},       # Selic diária
-            1: {"min": 0.5, "max": 10},      # Dólar
-            433: {"min": -10, "max": 50},    # IPCA
+            1: {"min": 0.5, "max": 20},          # Dolar (R$)
+            21620: {"min": 0.5, "max": 30},      # Euro (R$)
+            432: {"min": 0, "max": 50},          # Meta Selic (% a.a.)
+            433: {"min": -5, "max": 10},         # IPCA mensal (%)
+            13522: {"min": -5, "max": 50},       # IPCA 12 meses (%)
+            24369: {"min": 0, "max": 30},        # Desemprego (%)
+            13762: {"min": 10, "max": 200},      # Divida bruta (% PIB)
         }
         
         for series_code, ranges in series_ranges.items():
@@ -242,6 +251,7 @@ class DataValidator:
                 expectations.append({
                     "type": "between",
                     "column": "value",
+                    "where": {"series_code": series_code},
                     "kwargs": {"min_value": ranges["min"], "max_value": ranges["max"]}
                 })
         

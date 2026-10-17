@@ -59,7 +59,7 @@ class TestExtractors:
         config = load_config()
         extractor = BCBExtractor(config["bcb"])
         assert extractor.base_url == "https://api.bcb.gov.br/dados/serie/bcdata.sgs"
-        assert len(extractor.series) == 15
+        assert len(extractor.series) == 12
 
 
 class TestTransformers:

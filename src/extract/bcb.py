@@ -22,10 +22,10 @@ class BCBExtractor:
         self.date_format = config.get("date_format", "%d/%m/%Y")
         self.lookback_days = config.get("lookback_days", 60)
 
-    def _build_url(self, series_code: int) -> str:
+    def _build_url(self, series_code: int, lookback_days: int = None) -> str:
         """Constrói URL para uma série específica."""
         end_date = datetime.now()
-        start_date = end_date - timedelta(days=self.lookback_days)
+        start_date = end_date - timedelta(days=lookback_days or self.lookback_days)
 
         start_str = start_date.strftime(self.date_format)
         end_str = end_date.strftime(self.date_format)
@@ -41,7 +41,7 @@ class BCBExtractor:
     def _fetch_series(self, series_config: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Busca dados de uma série específica."""
         series_code = series_config["code"]
-        url = self._build_url(series_code)
+        url = self._build_url(series_code, series_config.get("lookback_days"))
 
         headers = {"Accept": "application/json", "User-Agent": "data-pipeline-estudo/1.0"}
         # Timeout maior para BCB que pode ser lento
@@ -57,6 +57,9 @@ class BCBExtractor:
                 record["series_name"] = series_config["name"]
                 record["series_description"] = series_config["description"]
                 record["unit"] = series_config["unit"]
+                record["kind"] = series_config.get("kind", "price")
+                record["frequency"] = series_config.get("frequency", "daily")
+                record["decimals"] = series_config.get("decimals", 2)
 
             return data
         except requests.exceptions.HTTPError as e:
@@ -91,6 +94,10 @@ class BCBExtractor:
                     if "valor" in record:
                         record["value"] = record["valor"]
                         del record["valor"]
+
+                # Algumas series (ex.: Meta Selic) trazem datas futuras agendadas.
+                hoje = datetime.now().date().isoformat()
+                raw_data = [r for r in raw_data if r.get("date", "") <= hoje]
 
                 all_records.extend(raw_data)
                 logger.info(f"  Série {series_config['name']}: {len(raw_data)} registros")

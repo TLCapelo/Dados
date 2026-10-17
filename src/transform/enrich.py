@@ -124,45 +124,70 @@ class DataEnricher:
     # ECONOMIA
     # ==========================================
     def enrich_economia(self, data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Enriquece dados econômicos."""
+        """
+        Enriquece os indicadores economicos. Cada serie usa a formula do seu "kind":
+          price/stock        -> variacao %, media e z-score de 30 dias (alerta de anomalia)
+          index              -> variacao % (mensal e em 12 meses)
+          rate/level_pct     -> variacao em pontos percentuais (p.p.)
+          monthly_rate       -> variacao em p.p. e acumulado de 12 meses (composto)
+        """
         if not data:
             return []
 
         df = pd.DataFrame(data)
-
-        # Garante ordenação por série e data
+        df["date"] = pd.to_datetime(df["date"])
         df = df.sort_values(["series_code", "date"]).reset_index(drop=True)
 
-        # Variação dia a dia
-        df["change_1d"] = df.groupby("series_code")["value"].diff()
-        df["pct_change_1d"] = df.groupby("series_code")["value"].pct_change() * 100
-
-        # Variação 7 dias
-        df["change_7d"] = df.groupby("series_code")["value"].diff(7)
-        df["pct_change_7d"] = df.groupby("series_code")["value"].pct_change(7) * 100
-
-        # Variação 30 dias
-        df["change_30d"] = df.groupby("series_code")["value"].diff(30)
-        df["pct_change_30d"] = df.groupby("series_code")["value"].pct_change(30) * 100
-
-        # Média móvel 7 e 30 dias
-        df["ma_7d"] = df.groupby("series_code")["value"].transform(lambda x: x.rolling(7, min_periods=1).mean())
-        df["ma_30d"] = df.groupby("series_code")["value"].transform(lambda x: x.rolling(30, min_periods=1).mean())
-
-        # Desvio padrão móvel (volatilidade)
-        df["std_7d"] = df.groupby("series_code")["value"].transform(lambda x: x.rolling(7, min_periods=2).std())
-        df["std_30d"] = df.groupby("series_code")["value"].transform(lambda x: x.rolling(30, min_periods=2).std())
-
-        # Z-score (quantos desvios padrão da média)
-        df["z_score_7d"] = (df["value"] - df["ma_7d"]) / df["std_7d"].replace(0, np.nan)
-        df["z_score_30d"] = (df["value"] - df["ma_30d"]) / df["std_30d"].replace(0, np.nan)
-
-        # Sinal de alerta (fora de 2 desvios padrão)
-        df["alert"] = df["z_score_30d"].apply(
-            lambda x: "Alerta" if pd.notna(x) and abs(x) > 2 else "Normal"
-        )
-
-        # Data fields
-        df["date"] = pd.to_datetime(df["date"]).dt.date
-
+        partes = [self._enrich_serie(g.copy()) for _, g in df.groupby("series_code", sort=False)]
+        df = pd.concat(partes, ignore_index=True)
+        df["date"] = df["date"].dt.date
         return df.to_dict("records")
+
+    @staticmethod
+    def _enrich_serie(g: pd.DataFrame) -> pd.DataFrame:
+        kind = g["kind"].iloc[0] if "kind" in g.columns else "price"
+        daily = (g["frequency"].iloc[0] if "frequency" in g.columns else "daily") == "daily"
+        pct = kind in ("price", "stock", "index")
+        s = g.set_index("date")["value"].astype(float)
+
+        def anterior(offset) -> pd.Series:
+            """Valor da serie na data (ou antes) de `data - offset`."""
+            return pd.Series(s.asof(s.index - offset).values, index=s.index)
+
+        def variacao(ref: pd.Series) -> pd.Series:
+            return (s / ref - 1) * 100 if pct else s - ref
+
+        um_mes = pd.Timedelta(days=30) if daily else pd.DateOffset(months=1)
+        v30 = variacao(anterior(um_mes))
+        v12m = variacao(anterior(pd.DateOffset(months=12)))
+
+        g["change_1d"] = s.diff().values
+        g["delta_30d"] = v30.values
+        g["delta_12m"] = v12m.values
+        g["delta_unit"] = "%" if pct else "p.p."
+
+        if kind == "monthly_rate":
+            fator = 1 + s / 100
+            acc = fator.rolling(12, min_periods=12).apply(np.prod, raw=True) - 1
+            g["acc_12m"] = (acc * 100).values
+        else:
+            g["acc_12m"] = np.nan
+
+        if kind in ("price", "stock") and daily:
+            media = s.rolling("30D", min_periods=5).mean()
+            desvio = s.rolling("30D", min_periods=5).std()
+            z = (s - media) / desvio.replace(0, np.nan)
+            g["ma_30d"] = media.values
+            g["z_score_30d"] = z.values
+            g["alert"] = np.where(z.abs() > 2, "Alerta", "Normal")
+        else:
+            g["ma_30d"] = np.nan
+            g["z_score_30d"] = np.nan
+            g["alert"] = ""
+
+        limite = 0.05 if pct else 0.01
+        g["trend"] = np.select(
+            [v30 > limite, v30 < -limite], ["Alta", "Queda"], default="Estavel"
+        )
+        g.loc[v30.isna().values, "trend"] = ""
+        return g.reset_index(drop=True)

@@ -154,73 +154,33 @@ coingecko:
 # ==========================================
 bcb:
   base_url: "https://api.bcb.gov.br/dados/serie/bcdata.sgs"
-  # Séries do SGS (Sistema Gerenciador de Séries Temporais)
+  # Séries do SGS (Sistema Gerenciador de Séries Temporais).
+  # Cada série tem um "kind", que define como o dashboard e o enriquecimento
+  # calculam a variação (porcentagem para preços, pontos percentuais para taxas):
+  #   price        preço/cotação diária      -> variação %, média móvel, z-score
+  #   stock        saldo diário              -> variação %
+  #   rate         taxa em % a.a.            -> variação em p.p.
+  #   monthly_rate taxa mensal em % a.m.     -> variação em p.p. + acumulado 12 meses
+  #   level_pct    nível em % (desemprego, dívida % PIB) -> variação em p.p.
+  #   index        número-índice (IBC-Br)    -> variação % mensal e em 12 meses
   series:
-    - code: 11
-      name: "selic"
-      description: "Taxa Selic (% a.a.)"
-      unit: "percentual_aa"
-    - code: 432
-      name: "selic_diaria"
-      description: "Taxa Selic diária (% a.d.)"
-      unit: "percentual_ad"
-    - code: 4390
-      name: "cdi"
-      description: "Taxa CDI (% a.a.)"
-      unit: "percentual_aa"
-    - code: 12
-      name: "poupanca"
-      description: "Poupança (% a.m.)"
-      unit: "percentual_am"
-    - code: 1
-      name: "dolar_venda"
-      description: "Dólar venda (R$)"
-      unit: "reais"
-    - code: 21619
-      name: "dolar_compra"
-      description: "Dólar compra (R$)"
-      unit: "reais"
-    - code: 21620
-      name: "euro_venda"
-      description: "Euro venda (R$)"
-      unit: "reais"
-    - code: 21621
-      name: "euro_compra"
-      description: "Euro compra (R$)"
-      unit: "reais"
-    - code: 433
-      name: "ipca"
-      description: "IPCA (% a.m.)"
-      unit: "percentual_am"
-    - code: 13522
-      name: "igpm"
-      description: "IGP-M (% a.m.)"
-      unit: "percentual_am"
-    - code: 27838
-      name: "pib_mensal"
-      description: "PIB mensal (R$ milhões)"
-      unit: "milhoes_reais"
-    - code: 24369
-      name: "desemprego"
-      description: "Taxa de desemprego (%)"
-      unit: "percentual"
-    - code: 28763
-      name: "divida_bruta"
-      description: "Dívida bruta do governo geral (% PIB)"
-      unit: "percentual_pib"
-    - code: 28764
-      name: "divida_liquida"
-      description: "Dívida líquida do setor público (% PIB)"
-      unit: "percentual_pib"
-    - code: 20786
-      name: "reservas_internacionais"
-      description: "Reservas internacionais (US$ milhões)"
-      unit: "milhoes_usd"
-  
+    - {code: 1,     name: "dolar_venda",  description: "Dólar comercial (venda)",      unit: "R$",             kind: price,        frequency: daily,   decimals: 4, lookback_days: 400}
+    - {code: 21620, name: "euro_venda",   description: "Euro (venda)",                  unit: "R$",             kind: price,        frequency: daily,   decimals: 4, lookback_days: 400}
+    - {code: 13621, name: "reservas",     description: "Reservas internacionais",       unit: "US$ milhões",    kind: stock,        frequency: daily,   decimals: 0, lookback_days: 400}
+    - {code: 432,   name: "selic_meta",   description: "Meta Selic",                    unit: "% a.a.",         kind: rate,         frequency: daily,   decimals: 2, lookback_days: 1100}
+    - {code: 4392,  name: "cdi_anual",    description: "CDI anualizado (média do mês)", unit: "% a.a.",         kind: rate,         frequency: monthly, decimals: 2, lookback_days: 1100}
+    - {code: 433,   name: "ipca_mensal",  description: "IPCA (variação mensal)",        unit: "% a.m.",         kind: monthly_rate, frequency: monthly, decimals: 2, lookback_days: 1100}
+    - {code: 13522, name: "ipca_12m",     description: "IPCA acumulado em 12 meses",    unit: "% em 12 meses",  kind: rate,         frequency: monthly, decimals: 2, lookback_days: 1100}
+    - {code: 189,   name: "igpm_mensal",  description: "IGP-M (variação mensal)",       unit: "% a.m.",         kind: monthly_rate, frequency: monthly, decimals: 2, lookback_days: 1100}
+    - {code: 24369, name: "desemprego",   description: "Taxa de desemprego (PNAD)",     unit: "%",              kind: level_pct,    frequency: monthly, decimals: 1, lookback_days: 1100}
+    - {code: 24364, name: "ibc_br",       description: "IBC-Br (atividade econômica)",  unit: "índice",         kind: index,        frequency: monthly, decimals: 1, lookback_days: 1100}
+    - {code: 13762, name: "divida_bruta", description: "Dívida bruta do governo geral", unit: "% do PIB",       kind: level_pct,    frequency: monthly, decimals: 1, lookback_days: 1100}
+    - {code: 4513,  name: "divida_liquida", description: "Dívida líquida do setor público", unit: "% do PIB",   kind: level_pct,    frequency: monthly, decimals: 1, lookback_days: 1100}
+
   # Formato de data para a API
   date_format: "%d/%m/%Y"
-  
-  # Quantos dias para trás buscar (para atualização incremental)
+
+  # Janela padrão (dias) quando a série não define lookback_days
   lookback_days: 60
 
 # ==========================================
