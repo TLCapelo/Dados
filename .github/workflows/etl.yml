@@ -2,8 +2,8 @@ name: Daily Data Pipeline
 
 on:
   schedule:
-    # Roda diariamente às 06:00 BRT (09:00 UTC)
-    - cron: '0 9 * * *'
+    # Roda a cada 3 horas (8 vezes ao dia)
+    - cron: '0 */3 * * *'
   workflow_dispatch:  # Permite execução manual
   push:
     branches: [main]

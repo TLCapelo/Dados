@@ -84,7 +84,10 @@ class ParquetLoader:
                 partition_cols=partition_cols if partition_cols else None,
                 compression="snappy",
                 use_dictionary=True,
-                write_statistics=True
+                write_statistics=True,
+                # Reexecucoes (o pipeline roda varias vezes ao dia) sobrescrevem
+                # as particoes atuais em vez de acumular um arquivo novo a cada rodada.
+                existing_data_behavior="delete_matching"
             )
             
             # Conta arquivos gerados
