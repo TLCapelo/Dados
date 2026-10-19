@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T23:22:10.668894",
+  "generated_at": "2026-10-19T20:30:14.432819",
   "source": "data-pipeline-estudo",
   "tables": {
     "clima_diario": {
@@ -21,8 +21,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-10-17 00:00:00",
-        "max": "2026-10-19 00:00:00"
+        "min": "2026-10-18 00:00:00",
+        "max": "2026-10-20 00:00:00"
       }
     },
     "clima_horario": {
@@ -44,8 +44,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-10-17 00:00:00",
-        "max": "2026-10-19 23:00:00"
+        "min": "2026-10-18 00:00:00",
+        "max": "2026-10-20 23:00:00"
       }
     },
     "crypto_market": {
@@ -67,8 +67,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-10-18 22:54:09.719236",
-        "max": "2026-10-18 22:54:09.719236"
+        "min": "2026-10-19 20:27:58.413794",
+        "max": "2026-10-19 20:27:58.413794"
       }
     },
     "crypto_historico": {
@@ -90,8 +90,31 @@
         }
       ],
       "date_range": {
-        "min": "2026-09-19 00:00:00",
-        "max": "2026-10-18 22:53:50"
+        "min": "2026-09-20 00:00:00",
+        "max": "2026-10-19 20:27:00"
+      }
+    },
+    "economia_diario": {
+      "name": "economia_diario",
+      "row_count": 2210,
+      "column_count": 18,
+      "columns": [
+        {
+          "name": "series_code",
+          "type": "int64",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            1,
+            1,
+            1
+          ],
+          "unique_count": 12
+        }
+      ],
+      "date_range": {
+        "min": null,
+        "max": null
       }
     }
   }
