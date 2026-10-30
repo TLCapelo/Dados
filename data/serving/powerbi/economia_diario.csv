@@ -274,6 +274,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-10-27,5.3346,-0.16610000000000014,2.606220307360907,-0.7405477820779938,%,,5.104490476190477,1.6839522298742067,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-10-28,5.342,0.007399999999999629,2.4706514233100663,-0.5028869435649175,%,,5.11062380952381,1.6018826375269382,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-10-29,5.3744,0.032399999999999984,2.949965519883535,0.6140482252508628,%,,5.117957142857143,1.6663784747287766,Normal,Alta
+1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-10-30,5.4212,0.046800000000000175,4.638190275820797,0.6722376973073318,%,,5.1293999999999995,1.745551174649081,Normal,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-10-01,0.5,,,,p.p.,,,,,
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.59,0.08999999999999997,0.08999999999999997,,p.p.,,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.74,0.15000000000000002,0.15000000000000002,,p.p.,,,,,Alta
@@ -2142,6 +2143,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-10-27,5.9437,-0.20340000000000025,0.2936064660918225,-4.92970137078329,%,,5.728842857142857,1.3361165387898908,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-10-28,5.9498,0.006099999999999994,0.43382117114836305,-4.9324918111368525,%,,5.730066666666667,1.3525646391116237,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-10-29,5.9988,0.04900000000000038,1.389311428861184,-3.698709304565584,%,,5.733980952380952,1.5756543713171067,Normal,Alta
+21620,euro_venda,Euro (venda),R$,price,daily,4,2026-10-30,6.0505,0.0517000000000003,2.969707283866585,-2.8188242852553724,%,,5.742290476190476,1.718237875911075,Normal,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-10-01,102.8499,,,,%,,,,,
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-11-01,103.60561,0.7557099999999934,0.7347697955953247,,%,,,,,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-12-01,104.8968,1.2911900000000003,1.2462549083973373,,%,,,,,Alta
@@ -2212,3 +2214,4 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 24369,desemprego,Taxa de desemprego (PNAD),%,level_pct,monthly,1,2026-06-01,5.4,-0.1999999999999993,-0.1999999999999993,-0.39999999999999947,p.p.,,,,,Queda
 24369,desemprego,Taxa de desemprego (PNAD),%,level_pct,monthly,1,2026-07-01,5.3,-0.10000000000000053,-0.10000000000000053,-0.2999999999999998,p.p.,,,,,Queda
 24369,desemprego,Taxa de desemprego (PNAD),%,level_pct,monthly,1,2026-08-01,5.3,0.0,0.0,-0.2999999999999998,p.p.,,,,,Estavel
+24369,desemprego,Taxa de desemprego (PNAD),%,level_pct,monthly,1,2026-09-01,5.2,-0.09999999999999964,-0.09999999999999964,-0.39999999999999947,p.p.,,,,,Queda
