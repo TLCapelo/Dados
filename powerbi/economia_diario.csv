@@ -1828,6 +1828,8 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-10-26,364888.0,119.0,-0.004384714883909346,1.5815393352579532,%,,363519.1,1.3456987380697119,Normal,Estavel
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-10-27,364987.0,99.0,0.022745708460303327,1.7742816989381627,%,,363589.0,1.341723211751646,Normal,Estavel
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-10-28,364540.0,-447.0,0.5494444873506366,1.615070272560537,%,,363683.85714285716,0.8287360724323828,Normal,Alta
+13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-10-29,365176.0,636.0,0.6990384429780505,2.049793064517491,%,,363804.5714285714,1.3023588680449871,Normal,Alta
+13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-10-30,365019.0,-157.0,0.6058083738262221,2.320164152244475,%,,363909.2380952381,1.0473416144425278,Normal,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-10-01,73.32,,,,p.p.,,,,,
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-11-01,73.32,0.0,0.0,,p.p.,,,,,Estavel
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-12-01,73.83,0.5100000000000051,0.5100000000000051,,p.p.,,,,,Alta
