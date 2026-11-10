@@ -272,6 +272,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-04,5.4778,-0.015699999999999825,9.865821616959835,1.7308620881774095,%,,5.163555000000001,1.5776149411928684,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-05,5.4621,-0.015699999999999825,9.90583122057227,1.5297966467154867,%,,5.1881699999999995,1.3405732296212334,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-06,5.5013,0.039199999999999235,10.16921998598177,2.9223026697348775,%,,5.213559999999999,1.3679987742517394,Normal,Alta
+1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-09,5.5146,0.01330000000000009,10.530746412250448,2.947710344055099,%,,5.251826315789474,1.2369066039247705,Normal,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.59,,,,p.p.,,,,,
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.74,0.15000000000000002,0.15000000000000002,,p.p.,,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2024-01-01,0.07,-0.6699999999999999,-0.6699999999999999,,p.p.,,,,,Queda
@@ -308,8 +309,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2026-08-01,-0.22,0.94,0.94,-0.58,p.p.,2.178242946891751,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2026-09-01,1.57,1.79,1.79,1.1500000000000001,p.p.,3.3483781728321116,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2026-10-01,1.47,-0.10000000000000009,-0.10000000000000009,1.83,p.p.,5.2464866840352675,,,,Queda
-432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-11-05,12.25,,,,p.p.,,,,,
-432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-11-06,12.25,0.0,,,p.p.,,,,,
+432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-11-06,12.25,,,,p.p.,,,,,
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-11-07,12.25,0.0,,,p.p.,,,,,
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-11-08,12.25,0.0,,,p.p.,,,,,
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-11-09,12.25,0.0,,,p.p.,,,,,
@@ -338,7 +338,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-02,12.25,0.0,,,p.p.,,,,,
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-03,12.25,0.0,,,p.p.,,,,,
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-04,12.25,0.0,,,p.p.,,,,,
-432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-05,12.25,0.0,0.0,,p.p.,,,,,Estavel
+432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-05,12.25,0.0,,,p.p.,,,,,
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-06,12.25,0.0,0.0,,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-07,12.25,0.0,0.0,,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2023-12-08,12.25,0.0,0.0,,p.p.,,,,,Estavel
@@ -674,7 +674,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-02,10.75,0.0,0.0,,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-03,10.75,0.0,0.0,,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-04,10.75,0.0,0.0,,p.p.,,,,,Estavel
-432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-05,10.75,0.0,0.0,-1.5,p.p.,,,,,Estavel
+432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-05,10.75,0.0,0.0,,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-06,10.75,0.0,0.0,-1.5,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-07,11.25,0.5,0.5,-1.0,p.p.,,,,,Alta
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2024-11-08,11.25,0.0,0.5,-1.0,p.p.,,,,,Alta
@@ -1409,6 +1409,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2026-11-07,13.75,0.0,0.0,-1.25,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2026-11-08,13.75,0.0,0.0,-1.25,p.p.,,,,,Estavel
 432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2026-11-09,13.75,0.0,0.0,-1.25,p.p.,,,,,Estavel
+432,selic_meta,Meta Selic,% a.a.,rate,daily,2,2026-11-10,13.75,0.0,0.0,-1.25,p.p.,,,,,Estavel
 433,ipca_mensal,IPCA (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.28,,,,p.p.,,,,,
 433,ipca_mensal,IPCA (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.56,0.28,0.28,,p.p.,,,,,Alta
 433,ipca_mensal,IPCA (variação mensal),% a.m.,monthly_rate,monthly,2,2024-01-01,0.42,-0.14000000000000007,-0.14000000000000007,,p.p.,,,,,Queda
