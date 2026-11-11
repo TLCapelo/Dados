@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T05:32:14.389257",
+  "generated_at": "2026-11-11T13:53:01.689046",
   "source": "data-pipeline-estudo",
   "tables": {
     "clima_diario": {
@@ -67,13 +67,13 @@
         }
       ],
       "date_range": {
-        "min": "2026-11-11 05:30:46.708773",
-        "max": "2026-11-11 05:30:46.708773"
+        "min": "2026-11-11 13:51:13.298523",
+        "max": "2026-11-11 13:51:13.298523"
       }
     },
     "crypto_historico": {
       "name": "crypto_historico",
-      "row_count": 150,
+      "row_count": 120,
       "column_count": 7,
       "columns": [
         {
@@ -86,17 +86,17 @@
             "binancecoin",
             "binancecoin"
           ],
-          "unique_count": 5
+          "unique_count": 4
         }
       ],
       "date_range": {
         "min": "2026-10-13 00:00:00",
-        "max": "2026-11-11 05:29:50"
+        "max": "2026-11-11 13:51:10"
       }
     },
     "economia_diario": {
       "name": "economia_diario",
-      "row_count": 2204,
+      "row_count": 2205,
       "column_count": 18,
       "columns": [
         {
