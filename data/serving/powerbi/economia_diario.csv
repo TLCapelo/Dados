@@ -273,6 +273,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-06,5.5013,0.039199999999999235,10.16921998598177,2.9223026697348775,%,,5.21356,1.367998774251763,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-09,5.5146,0.01330000000000009,10.530746412250448,2.947710344055099,%,,5.251826315789474,1.2369066039247967,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-10,5.584,0.0693999999999999,11.92175098212136,4.99990598145954,%,,5.268434999999999,1.436255222414855,Normal,Alta
+1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-11,5.5606,-0.023399999999999643,11.452737913894007,5.4562005727398555,%,,5.282347619047619,1.245314325924779,Normal,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.59,,,,p.p.,,,,,
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.74,0.15000000000000002,0.15000000000000002,,p.p.,,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2024-01-01,0.07,-0.6699999999999999,-0.6699999999999999,,p.p.,,,,,Queda
@@ -2135,6 +2136,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-06,6.13,-0.001100000000000101,9.756315911980096,-0.5999675693205808,%,,5.832649999999999,1.2863579007878514,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-09,6.1729,0.04290000000000038,10.571945474412026,-0.3969342476805138,%,,5.875531578947368,1.2723812431326118,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-10,6.2305,0.057599999999999874,11.603704300786365,1.48881757912398,%,,5.89328,1.399677229890638,Normal,Alta
+21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-11,6.1694,-0.06109999999999971,10.509251795726083,0.927577011795111,%,,5.906428571428571,1.084714813911406,Normal,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-11-01,103.60561,,,,%,,,,,
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-12-01,104.8968,1.2911900000000003,1.2462549083973373,,%,,,,,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-01-01,104.46088,-0.43591999999999587,-0.4155703510497877,,%,,,,,Queda
