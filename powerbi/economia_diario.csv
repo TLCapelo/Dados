@@ -273,6 +273,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-09,5.5146,0.01330000000000009,10.530746412250448,2.947710344055099,%,,5.251826315789474,1.2369066039247971,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-10,5.584,0.0693999999999999,11.92175098212136,4.99990598145954,%,,5.268435,1.4362552224148515,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-11,5.5606,-0.023399999999999643,11.452737913894007,5.4562005727398555,%,,5.28234761904762,1.2453143259247756,Normal,Alta
+1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-12,5.6143,0.05370000000000008,12.070824017885663,6.160537014276257,%,,5.311142857142857,1.3444518497344542,Normal,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.59,,,,p.p.,,,,,
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.74,0.15000000000000002,0.15000000000000002,,p.p.,,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2024-01-01,0.07,-0.6699999999999999,-0.6699999999999999,,p.p.,,,,,Queda
@@ -1445,6 +1446,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 433,ipca_mensal,IPCA (variação mensal),% a.m.,monthly_rate,monthly,2,2026-07-01,0.07,-0.09,-0.09,-0.19,p.p.,4.44302461783459,,,,Queda
 433,ipca_mensal,IPCA (variação mensal),% a.m.,monthly_rate,monthly,2,2026-08-01,-0.32,-0.39,-0.39,-0.21000000000000002,p.p.,4.223452737068278,,,,Queda
 433,ipca_mensal,IPCA (variação mensal),% a.m.,monthly_rate,monthly,2,2026-09-01,0.82,1.14,1.14,0.33999999999999997,p.p.,4.576119675071877,,,,Alta
+433,ipca_mensal,IPCA (variação mensal),% a.m.,monthly_rate,monthly,2,2026-10-01,0.14,-0.6799999999999999,-0.6799999999999999,0.05000000000000002,p.p.,4.628360717970881,,,,Queda
 4392,cdi_anual,CDI anualizado (média do mês),% a.a.,rate,monthly,2,2023-11-01,12.17,,,,p.p.,,,,,
 4392,cdi_anual,CDI anualizado (média do mês),% a.a.,rate,monthly,2,2023-12-01,11.87,-0.3000000000000007,-0.3000000000000007,,p.p.,,,,,Queda
 4392,cdi_anual,CDI anualizado (média do mês),% a.a.,rate,monthly,2,2024-01-01,11.65,-0.21999999999999886,-0.21999999999999886,,p.p.,,,,,Queda
@@ -1552,6 +1554,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 13522,ipca_12m,IPCA acumulado em 12 meses,% em 12 meses,rate,monthly,2,2026-07-01,4.44,-0.1999999999999993,-0.1999999999999993,-0.79,p.p.,,,,,Queda
 13522,ipca_12m,IPCA acumulado em 12 meses,% em 12 meses,rate,monthly,2,2026-08-01,4.22,-0.22000000000000064,-0.22000000000000064,-0.9100000000000001,p.p.,,,,,Queda
 13522,ipca_12m,IPCA acumulado em 12 meses,% em 12 meses,rate,monthly,2,2026-09-01,4.58,0.3600000000000003,0.3600000000000003,-0.5899999999999999,p.p.,,,,,Alta
+13522,ipca_12m,IPCA acumulado em 12 meses,% em 12 meses,rate,monthly,2,2026-10-01,4.63,0.04999999999999982,0.04999999999999982,-0.04999999999999982,p.p.,,,,,Alta
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2025-10-08,357592.0,,,,%,,,,Normal,
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2025-10-09,357096.0,-496.0,,,%,,,,Normal,
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2025-10-10,357446.0,350.0,,,%,,,,Normal,
@@ -1825,6 +1828,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-06,367402.0,-463.0,1.3561903080394844,2.569242236857172,%,,364823.5,1.7902751665822396,Normal,Alta
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-09,367923.0,521.0,1.3112641500601763,2.6158574679816082,%,,365203.4210526316,1.8846837064421138,Normal,Alta
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-10,366324.0,-1599.0,0.8709635671231286,2.0668364418538587,%,,365259.45,0.7461733929021468,Normal,Alta
+13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-11,365849.0,-475.0,0.7401675840742916,1.8431191332524133,%,,365287.5238095238,0.40206149709690836,Normal,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-11-01,73.32,,,,p.p.,,,,,
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-12-01,73.83,0.5100000000000051,0.5100000000000051,,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2024-01-01,74.47,0.6400000000000006,0.6400000000000006,,p.p.,,,,,Alta
@@ -2134,6 +2138,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-09,6.1729,0.04290000000000038,10.571945474412026,-0.3969342476805138,%,,5.875531578947368,1.2723812431326138,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-10,6.2305,0.057599999999999874,11.603704300786365,1.48881757912398,%,,5.89328,1.39967722989064,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-11,6.1694,-0.06109999999999971,10.509251795726083,0.927577011795111,%,,5.906428571428571,1.0847148139114076,Normal,Alta
+21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-12,6.2121,0.04269999999999996,10.780012839717546,1.334355578030455,%,,5.935214285714285,1.1486079906401345,Normal,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-11-01,103.60561,,,,%,,,,,
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-12-01,104.8968,1.2911900000000003,1.2462549083973373,,%,,,,,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-01-01,104.46088,-0.43591999999999587,-0.4155703510497877,,%,,,,,Queda
