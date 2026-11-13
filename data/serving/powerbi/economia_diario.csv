@@ -273,6 +273,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-10,5.584,0.0693999999999999,11.92175098212136,4.99990598145954,%,,5.268435,1.4362552224148533,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-11,5.5606,-0.023399999999999643,11.452737913894007,5.4562005727398555,%,,5.282347619047619,1.245314325924781,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-12,5.6143,0.05370000000000008,12.070824017885663,6.160537014276257,%,,5.3111428571428565,1.3444518497344593,Normal,Alta
+1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-13,5.6518,0.037499999999999645,12.047738942526909,7.00113593335856,%,,5.340080952380951,1.3643295331958993,Normal,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.59,,,,p.p.,,,,,
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.74,0.15000000000000002,0.15000000000000002,,p.p.,,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2024-01-01,0.07,-0.6699999999999999,-0.6699999999999999,,p.p.,,,,,Queda
@@ -1506,18 +1507,18 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-07-01,63.41,0.8099999999999952,0.8099999999999952,2.5,p.p.,,,,,Alta
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-08-01,64.05,0.6400000000000006,0.6400000000000006,2.969999999999999,p.p.,,,,,Alta
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-09-01,64.57,0.519999999999996,0.519999999999996,3.1099999999999923,p.p.,,,,,Alta
-4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-10-01,64.68,0.11000000000001364,0.11000000000001364,3.5600000000000094,p.p.,,,,,Alta
-4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-11-01,65.18,0.5,0.5,4.190000000000005,p.p.,,,,,Alta
+4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-10-01,64.69,0.12000000000000455,0.12000000000000455,3.5700000000000003,p.p.,,,,,Alta
+4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-11-01,65.18,0.4900000000000091,0.4900000000000091,4.190000000000005,p.p.,,,,,Alta
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2025-12-01,65.24,0.05999999999998806,0.05999999999998806,3.9399999999999977,p.p.,,,,,Alta
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-01-01,64.94,-0.29999999999999716,-0.29999999999999716,3.979999999999997,p.p.,,,,,Queda
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-02-01,65.46,0.519999999999996,0.519999999999996,4.329999999999991,p.p.,,,,,Alta
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-03-01,66.67,1.210000000000008,1.210000000000008,5.3700000000000045,p.p.,,,,,Alta
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-04-01,67.13,0.45999999999999375,0.45999999999999375,5.8799999999999955,p.p.,,,,,Alta
-4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-05-01,67.88,0.75,0.75,6.169999999999995,p.p.,,,,,Alta
-4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-06-01,68.49,0.6099999999999994,0.6099999999999994,5.8899999999999935,p.p.,,,,,Alta
+4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-05-01,67.89,0.7600000000000051,0.7600000000000051,6.18,p.p.,,,,,Alta
+4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-06-01,68.49,0.5999999999999943,0.5999999999999943,5.8899999999999935,p.p.,,,,,Alta
 4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-07-01,69.11,0.6200000000000045,0.6200000000000045,5.700000000000003,p.p.,,,,,Alta
-4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-08-01,69.27,0.1599999999999966,0.1599999999999966,5.219999999999999,p.p.,,,,,Alta
-4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-09-01,69.98,0.710000000000008,0.710000000000008,5.410000000000011,p.p.,,,,,Alta
+4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-08-01,69.32,0.20999999999999375,0.20999999999999375,5.269999999999996,p.p.,,,,,Alta
+4513,divida_liquida,Dívida líquida do setor público,% do PIB,level_pct,monthly,1,2026-09-01,70.0,0.6800000000000068,0.6800000000000068,5.430000000000007,p.p.,,,,,Alta
 13522,ipca_12m,IPCA acumulado em 12 meses,% em 12 meses,rate,monthly,2,2023-11-01,4.68,,,,p.p.,,,,,
 13522,ipca_12m,IPCA acumulado em 12 meses,% em 12 meses,rate,monthly,2,2023-12-01,4.62,-0.05999999999999961,-0.05999999999999961,,p.p.,,,,,Queda
 13522,ipca_12m,IPCA acumulado em 12 meses,% em 12 meses,rate,monthly,2,2024-01-01,4.51,-0.11000000000000032,-0.11000000000000032,,p.p.,,,,,Queda
@@ -1848,21 +1849,21 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-04-01,75.62,0.07000000000000739,0.07000000000000739,0.46999999999999886,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-05-01,75.75,0.12999999999999545,0.12999999999999545,0.0799999999999983,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-06-01,76.3,0.5499999999999972,0.5499999999999972,-0.38000000000000966,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-07-01,77.18,0.8800000000000097,0.8800000000000097,-0.029999999999986926,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-08-01,77.31,0.12999999999999545,0.12999999999999545,-0.04999999999999716,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-07-01,77.17,0.8700000000000045,0.8700000000000045,-0.03999999999999204,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-08-01,77.31,0.14000000000000057,0.14000000000000057,-0.04999999999999716,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-09-01,77.84,0.5300000000000011,0.5300000000000011,0.75,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-10-01,78.29,0.45000000000000284,0.45000000000000284,0.9100000000000108,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-11-01,78.95,0.6599999999999966,0.6599999999999966,1.4500000000000028,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2025-12-01,78.64,-0.3100000000000023,-0.3100000000000023,2.3700000000000045,p.p.,,,,,Queda
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-01-01,78.7,0.060000000000002274,0.060000000000002274,3.219999999999999,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-02-01,79.13,0.4299999999999926,0.4299999999999926,3.3499999999999943,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-03-01,79.88,0.75,0.75,4.329999999999998,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-04-01,80.09,0.21000000000000796,0.21000000000000796,4.469999999999999,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-05-01,81.04,0.9500000000000028,0.9500000000000028,5.290000000000006,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-01-01,78.69,0.04999999999999716,0.04999999999999716,3.2099999999999937,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-02-01,79.12,0.4300000000000068,0.4300000000000068,3.3400000000000034,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-03-01,79.88,0.7599999999999909,0.7599999999999909,4.329999999999998,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-04-01,80.1,0.21999999999999886,0.21999999999999886,4.47999999999999,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-05-01,81.04,0.9400000000000119,0.9400000000000119,5.290000000000006,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-06-01,81.95,0.9099999999999966,0.9099999999999966,5.650000000000006,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-07-01,82.55,0.5999999999999943,0.5999999999999943,5.36999999999999,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-08-01,82.87,0.3200000000000074,0.3200000000000074,5.560000000000002,p.p.,,,,,Alta
-13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-09-01,82.93,0.060000000000002274,0.060000000000002274,5.090000000000003,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-07-01,82.55,0.5999999999999943,0.5999999999999943,5.3799999999999955,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-08-01,82.93,0.38000000000000966,0.38000000000000966,5.6200000000000045,p.p.,,,,,Alta
+13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2026-09-01,82.95,0.01999999999999602,0.01999999999999602,5.109999999999999,p.p.,,,,,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2025-10-09,6.1872,,,,%,,,,Normal,
 21620,euro_venda,Euro (venda),R$,price,daily,4,2025-10-10,6.3216,0.1344000000000003,,,%,,,,Normal,
 21620,euro_venda,Euro (venda),R$,price,daily,4,2025-10-13,6.3221,0.0004999999999997229,,,%,,,,Normal,
@@ -2137,6 +2138,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-10,6.2305,0.057599999999999874,11.603704300786365,1.48881757912398,%,,5.89328,1.3996772298906401,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-11,6.1694,-0.06109999999999971,10.509251795726083,0.927577011795111,%,,5.906428571428571,1.0847148139114076,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-12,6.2121,0.04269999999999996,10.780012839717546,1.334355578030455,%,,5.935214285714285,1.1486079906401347,Normal,Alta
+21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-13,6.2321,0.019999999999999574,11.101009020572604,1.392662490848462,%,,5.9648666666666665,1.1263846792635854,Normal,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-11-01,103.60561,,,,%,,,,,
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-12-01,104.8968,1.2911900000000003,1.2462549083973373,,%,,,,,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-01-01,104.46088,-0.43591999999999587,-0.4155703510497877,,%,,,,,Queda
