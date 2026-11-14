@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-14T13:21:58.866916",
+  "generated_at": "2026-11-14T19:51:20.919488",
   "source": "data-pipeline-estudo",
   "tables": {
     "clima_diario": {
       "name": "clima_diario",
-      "row_count": 21,
+      "row_count": 30,
       "column_count": 30,
       "columns": [
         {
@@ -17,7 +17,7 @@
             "Manaus",
             "Manaus"
           ],
-          "unique_count": 7
+          "unique_count": 10
         }
       ],
       "date_range": {
@@ -27,7 +27,7 @@
     },
     "clima_horario": {
       "name": "clima_horario",
-      "row_count": 504,
+      "row_count": 720,
       "column_count": 22,
       "columns": [
         {
@@ -40,7 +40,7 @@
             "Manaus",
             "Manaus"
           ],
-          "unique_count": 7
+          "unique_count": 10
         }
       ],
       "date_range": {
@@ -67,8 +67,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-11-14 13:20:11.588146",
-        "max": "2026-11-14 13:20:11.588146"
+        "min": "2026-11-14 19:49:38.027496",
+        "max": "2026-11-14 19:49:38.027496"
       }
     },
     "crypto_historico": {
@@ -91,7 +91,7 @@
       ],
       "date_range": {
         "min": "2026-10-16 00:00:00",
-        "max": "2026-11-14 13:20:20"
+        "max": "2026-11-14 19:48:50"
       }
     },
     "economia_diario": {
