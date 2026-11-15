@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T19:51:20.919488",
+  "generated_at": "2026-11-15T00:55:30.868281",
   "source": "data-pipeline-estudo",
   "tables": {
     "clima_diario": {
@@ -67,8 +67,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-11-14 19:49:38.027496",
-        "max": "2026-11-14 19:49:38.027496"
+        "min": "2026-11-15 00:53:50.355556",
+        "max": "2026-11-15 00:53:50.355556"
       }
     },
     "crypto_historico": {
@@ -90,13 +90,13 @@
         }
       ],
       "date_range": {
-        "min": "2026-10-16 00:00:00",
-        "max": "2026-11-14 19:48:50"
+        "min": "2026-10-17 00:00:00",
+        "max": "2026-11-15 00:52:40"
       }
     },
     "economia_diario": {
       "name": "economia_diario",
-      "row_count": 2206,
+      "row_count": 2203,
       "column_count": 18,
       "columns": [
         {
