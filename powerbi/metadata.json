@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-16T00:54:11.537936",
+  "generated_at": "2026-11-16T10:58:47.132803",
   "source": "data-pipeline-estudo",
   "tables": {
     "clima_diario": {
       "name": "clima_diario",
-      "row_count": 30,
+      "row_count": 18,
       "column_count": 30,
       "columns": [
         {
@@ -17,17 +17,17 @@
             "Manaus",
             "Manaus"
           ],
-          "unique_count": 10
+          "unique_count": 6
         }
       ],
       "date_range": {
-        "min": "2026-11-14 00:00:00",
-        "max": "2026-11-16 00:00:00"
+        "min": "2026-11-15 00:00:00",
+        "max": "2026-11-17 00:00:00"
       }
     },
     "clima_horario": {
       "name": "clima_horario",
-      "row_count": 720,
+      "row_count": 432,
       "column_count": 22,
       "columns": [
         {
@@ -40,12 +40,12 @@
             "Manaus",
             "Manaus"
           ],
-          "unique_count": 10
+          "unique_count": 6
         }
       ],
       "date_range": {
-        "min": "2026-11-14 00:00:00",
-        "max": "2026-11-16 23:00:00"
+        "min": "2026-11-15 00:00:00",
+        "max": "2026-11-17 23:00:00"
       }
     },
     "crypto_market": {
@@ -67,8 +67,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-11-16 00:52:27.748408",
-        "max": "2026-11-16 00:52:27.748408"
+        "min": "2026-11-16 10:57:05.283690",
+        "max": "2026-11-16 10:57:05.283690"
       }
     },
     "crypto_historico": {
@@ -82,16 +82,16 @@
           "nullable": "False",
           "null_percentage": 0.0,
           "sample_values": [
-            "bitcoin",
-            "bitcoin",
-            "bitcoin"
+            "binancecoin",
+            "binancecoin",
+            "binancecoin"
           ],
           "unique_count": 4
         }
       ],
       "date_range": {
         "min": "2026-10-18 00:00:00",
-        "max": "2026-11-16 00:52:40"
+        "max": "2026-11-16 10:56:00"
       }
     },
     "economia_diario": {
