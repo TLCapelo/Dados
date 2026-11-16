@@ -272,6 +272,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-11,5.5606,-0.023399999999999643,11.452737913894007,5.4562005727398555,%,,5.282347619047619,1.2453143259247814,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-12,5.6143,0.05370000000000008,12.070824017885663,6.160537014276257,%,,5.3111428571428565,1.34445184973446,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-13,5.6518,0.037499999999999645,12.047738942526909,7.00113593335856,%,,5.340080952380952,1.364329533195896,Normal,Alta
+1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-16,5.7324,0.08060000000000045,12.784795183567454,8.25653421967063,%,,5.38697,1.502127044178165,Normal,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.59,,,,p.p.,,,,,
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.74,0.15000000000000002,0.15000000000000002,,p.p.,,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2024-01-01,0.07,-0.6699999999999999,-0.6699999999999999,,p.p.,,,,,Queda
@@ -1825,6 +1826,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-10,366324.0,-1599.0,0.8709635671231286,2.0668364418538587,%,,365259.45,0.7461733929021329,Normal,Alta
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-11,365849.0,-475.0,0.7401675840742916,1.8431191332524133,%,,365287.5238095238,0.40206149709690103,Normal,Alta
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-12,364435.0,-1414.0,0.3021987851498764,1.255570744284773,%,,365339.8095238095,-0.6756382843624269,Normal,Alta
+13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-13,364006.0,-429.0,0.3979997958975412,1.1265422238026845,%,,365408.5238095238,-1.148261602602057,Normal,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-11-01,73.32,,,,p.p.,,,,,
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-12-01,73.83,0.5100000000000051,0.5100000000000051,,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2024-01-01,74.47,0.6400000000000006,0.6400000000000006,,p.p.,,,,,Alta
@@ -2133,40 +2135,42 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-11,6.1694,-0.06109999999999971,10.509251795726083,0.927577011795111,%,,5.906428571428571,1.084714813911406,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-12,6.2121,0.04269999999999996,10.780012839717546,1.334355578030455,%,,5.935214285714285,1.148607990640133,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-13,6.2321,0.019999999999999574,11.101009020572604,1.392662490848462,%,,5.964866666666667,1.1263846792635797,Normal,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-11-01,103.60561,,,,%,,,,,
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-12-01,104.8968,1.2911900000000003,1.2462549083973373,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-01-01,104.46088,-0.43591999999999587,-0.4155703510497877,,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-02-01,104.65783,0.19695000000000107,0.18853948004267096,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-03-01,104.68489,0.027059999999991646,0.025855686096298847,,%,,,,,Estavel
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-04-01,104.62189,-0.06300000000000239,-0.06018060486093768,,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-05-01,105.5883,0.9664100000000104,0.9237168244618843,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-06-01,106.56647,0.9781699999999915,0.9263999893927455,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-07-01,107.07017,0.5037000000000091,0.4726627427933172,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-08-01,107.19578,0.12560999999999467,0.11731558845942125,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-09-01,108.05141,0.855630000000005,0.7981937348653156,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-10-01,108.26621,0.21479999999999677,0.19879425914015592,,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-11-01,108.02232,-0.2438900000000075,-0.22526880732225418,4.263002746665934,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-12-01,107.37891,-0.6434099999999887,-0.5956269037732054,2.366239961562222,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-01-01,108.05509,0.6761800000000022,0.6297139726972434,3.4407234555175137,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-02-01,108.57481,0.5197199999999924,0.4809768794787894,3.742653559700204,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-03-01,110.03087,1.4560599999999937,1.3410661275851998,5.106735078959335,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-04-01,109.51799,-0.5128799999999956,-0.4661237341847757,4.679804580093139,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-05-01,108.88849,-0.6294999999999931,-0.5747914109818786,3.1255262183404797,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-06-01,108.82565,-0.06284000000000844,-0.05771041549020861,2.1199726330430213,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-07-01,108.60295,-0.22269999999998902,-0.20463925554314866,1.4315658600336567,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-08-01,108.84223,0.23927999999999372,0.2203255068117249,1.5359280001507436,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-09-01,108.7154,-0.12682999999999822,-0.11652646220129403,0.6145130359705542,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-10-01,108.73877,0.02336999999999989,0.021496494516881626,0.4364796735749854,%,,,,,Estavel
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-11-01,109.25356,0.5147899999999908,0.47341900225650324,1.1398014780648946,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-12-01,109.47578,0.2222200000000072,0.20339840642265017,1.9527763878400384,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-01-01,110.15169,0.6759100000000018,0.6174059686991917,1.9403065602925373,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-02-01,110.82485,0.6731599999999958,0.6111209006416374,2.0723407206515,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-03-01,110.65755,-0.16729999999999734,-0.15095892302132707,0.5695492546773595,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-04-01,111.04254,0.38499000000000194,0.3479111908767152,1.3920544012905989,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-05-01,111.25061,0.2080699999999922,0.18737863885316397,2.169301824279124,%,,,,,Alta
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-06-01,110.37352,-0.8770899999999955,-0.7883911827539558,1.422339310631271,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-07-01,110.03188,-0.34163999999999817,-0.30953076426302184,1.3157377400889958,%,,,,,Queda
-24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-08-01,110.40624,0.3743599999999958,0.3402286682732347,1.4369514479811718,%,,,,,Alta
+21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-16,6.3084,0.07629999999999981,10.526315789473673,2.598965618189508,%,,6.01019,1.2727585511122417,Normal,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-11-01,103.63572,,,,%,,,,,
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-12-01,104.92651,1.290789999999987,1.2455068580601303,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-01-01,104.46565,-0.4608599999999967,-0.43922169907300024,,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-02-01,104.64558,0.1799299999999988,0.17223843435616448,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-03-01,104.65885,0.013270000000005666,0.012680898705896837,,%,,,,,Estavel
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-04-01,104.56964,-0.08920999999999424,-0.08523884984403818,,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-05-01,105.56018,0.9905399999999958,0.947253906583212,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-06-01,106.4975,0.9373199999999997,0.8879484669313653,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-07-01,106.99461,0.49710999999999217,0.46678091034999536,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-08-01,107.16064,0.16603000000000634,0.15517604111086047,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-09-01,108.11385,0.9532099999999986,0.8895150308919408,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-10-01,108.31094,0.19709000000000287,0.18229856766733832,,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-11-01,108.0559,-0.25504000000000815,-0.23547021196567153,4.265112453505404,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-12-01,107.39754,-0.6583599999999876,-0.609277235208805,2.3550101876065543,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-01-01,108.05569,0.658149999999992,0.6128166436586868,3.4365746061025826,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-02-01,108.549,0.49331000000000813,0.45653310806679226,3.730133656863499,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-03-01,109.98458,1.4355799999999874,1.3225179412062582,5.088657098754656,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-04-01,109.47447,-0.5101099999999974,-0.4638013801571028,4.690491427530974,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-05-01,108.84792,-0.6265499999999946,-0.5723252188386874,3.1145646019171247,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-06-01,108.73331,-0.11460999999999899,-0.10529369784925136,2.0994013943989254,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-07-01,108.50375,-0.22956000000000643,-0.21112205634133963,1.4104822663496774,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-08-01,108.79715,0.29340000000000543,0.2704054007349965,1.5271558661837048,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-09-01,108.83935,0.04219999999999402,0.03878778074608569,0.6710518587581538,%,,,,,Estavel
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-10-01,108.80648,-0.03287000000000262,-0.03020047436887996,0.45751611056092933,%,,,,,Estavel
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-11-01,109.30706,0.5005800000000136,0.46006451086371136,1.157882170247082,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2025-12-01,109.5148,0.20773999999998694,0.19005176792787903,1.9714231815737948,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-01-01,110.205,0.6902000000000044,0.6302344523297254,1.9890761883987862,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-02-01,110.85559,0.6505900000000082,0.5903452656413233,2.1249297552257573,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-03-01,110.64977,-0.20582000000000278,-0.18566497187918474,0.6048029641973596,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-04-01,111.01392,0.3641499999999951,0.3291014522669,1.406218271712123,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-05-01,111.27562,0.2617000000000047,0.23573620317163257,2.230359569571938,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-06-01,110.31795,-0.9576700000000073,-0.860628770255345,1.4573638933644162,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-07-01,109.91887,-0.3990799999999979,-0.3617543654500399,1.3042129880303621,%,,,,,Queda
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-08-01,110.04903,0.1301600000000036,0.11841460888379896,1.1506551412422183,%,,,,,Alta
+24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2026-09-01,109.77734,-0.27169000000000665,-0.2468808675551326,0.8618114680030597,%,,,,,Queda
 24369,desemprego,Taxa de desemprego (PNAD),%,level_pct,monthly,1,2023-11-01,7.5,,,,p.p.,,,,,
 24369,desemprego,Taxa de desemprego (PNAD),%,level_pct,monthly,1,2023-12-01,7.4,-0.09999999999999964,-0.09999999999999964,,p.p.,,,,,Queda
 24369,desemprego,Taxa de desemprego (PNAD),%,level_pct,monthly,1,2024-01-01,7.6,0.1999999999999993,0.1999999999999993,,p.p.,,,,,Alta
