@@ -273,6 +273,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-13,5.6518,0.037499999999999645,12.047738942526909,7.00113593335856,%,,5.340080952380952,1.3643295331958933,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-16,5.7324,0.08060000000000045,12.784795183567454,8.25653421967063,%,,5.38697,1.502127044178162,Normal,Alta
 1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-17,5.7851,0.05269999999999975,13.821666076417571,8.930857874519837,%,,5.405928571428571,1.5773396879178145,Normal,Alta
+1,dolar_venda,Dólar comercial (venda),R$,price,daily,4,2026-11-18,5.8102,0.025100000000000122,14.907839569654291,8.884766027623158,%,,5.441823809523809,1.5230986642374909,Normal,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-11-01,0.59,,,,p.p.,,,,,
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2023-12-01,0.74,0.15000000000000002,0.15000000000000002,,p.p.,,,,,Alta
 189,igpm_mensal,IGP-M (variação mensal),% a.m.,monthly_rate,monthly,2,2024-01-01,0.07,-0.6699999999999999,-0.6699999999999999,,p.p.,,,,,Queda
@@ -1827,6 +1828,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-12,364435.0,-1414.0,0.3021987851498764,1.255570744284773,%,,365339.8095238095,-0.6756382843624341,Normal,Alta
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-13,364006.0,-429.0,0.3979997958975412,1.1265422238026845,%,,365408.5238095238,-1.1482616026020716,Normal,Alta
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-16,363843.0,-163.0,-0.27846373530596713,1.2971067753574816,%,,365412.7,-1.2333223961666273,Normal,Queda
+13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-17,364074.0,231.0,-0.2151516065110104,1.4755560510619325,%,,365348.95238095237,-1.0003965517346554,Normal,Queda
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-11-01,73.32,,,,p.p.,,,,,
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-12-01,73.83,0.5100000000000051,0.5100000000000051,,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2024-01-01,74.47,0.6400000000000006,0.6400000000000006,,p.p.,,,,,Alta
@@ -2136,6 +2138,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-13,6.2321,0.019999999999999574,11.101009020572604,1.392662490848462,%,,5.9648666666666665,1.1263846792635834,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-16,6.3084,0.07629999999999981,10.526315789473673,2.598965618189508,%,,6.01019,1.2727585511122417,Normal,Alta
 21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-17,6.3647,0.05630000000000024,11.512719882262235,3.353252573804033,%,,6.027071428571428,1.4002707086351964,Normal,Alta
+21620,euro_venda,Euro (venda),R$,price,daily,4,2026-11-18,6.3702,0.005499999999999616,12.41860054707491,3.084342028610254,%,,6.060580952380953,1.3043735983515368,Normal,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-11-01,103.63572,,,,%,,,,,
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2023-12-01,104.92651,1.290789999999987,1.2455068580601303,,%,,,,,Alta
 24364,ibc_br,IBC-Br (atividade econômica),índice,index,monthly,1,2024-01-01,104.46565,-0.4608599999999967,-0.43922169907300024,,%,,,,,Queda
