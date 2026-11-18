@@ -1,53 +1,7 @@
 {
-  "generated_at": "2026-11-18T11:23:02.476028",
+  "generated_at": "2026-11-18T20:15:38.883165",
   "source": "data-pipeline-estudo",
   "tables": {
-    "clima_diario": {
-      "name": "clima_diario",
-      "row_count": 30,
-      "column_count": 30,
-      "columns": [
-        {
-          "name": "city",
-          "type": "object",
-          "nullable": "False",
-          "null_percentage": 0.0,
-          "sample_values": [
-            "Manaus",
-            "Manaus",
-            "Manaus"
-          ],
-          "unique_count": 10
-        }
-      ],
-      "date_range": {
-        "min": "2026-11-17 00:00:00",
-        "max": "2026-11-19 00:00:00"
-      }
-    },
-    "clima_horario": {
-      "name": "clima_horario",
-      "row_count": 720,
-      "column_count": 22,
-      "columns": [
-        {
-          "name": "city",
-          "type": "object",
-          "nullable": "False",
-          "null_percentage": 0.0,
-          "sample_values": [
-            "Manaus",
-            "Manaus",
-            "Manaus"
-          ],
-          "unique_count": 10
-        }
-      ],
-      "date_range": {
-        "min": "2026-11-17 00:00:00",
-        "max": "2026-11-19 23:00:00"
-      }
-    },
     "crypto_market": {
       "name": "crypto_market",
       "row_count": 14,
@@ -67,8 +21,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-11-18 11:21:19.995705",
-        "max": "2026-11-18 11:21:19.995705"
+        "min": "2026-11-18 20:13:58.037948",
+        "max": "2026-11-18 20:13:58.037948"
       }
     },
     "crypto_historico": {
@@ -91,12 +45,12 @@
       ],
       "date_range": {
         "min": "2026-10-20 00:00:00",
-        "max": "2026-11-18 11:21:30"
+        "max": "2026-11-18 20:13:10"
       }
     },
     "economia_diario": {
       "name": "economia_diario",
-      "row_count": 2207,
+      "row_count": 2210,
       "column_count": 18,
       "columns": [
         {
