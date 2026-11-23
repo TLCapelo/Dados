@@ -1823,6 +1823,7 @@ series_code,series_name,series_description,unit,kind,frequency,decimals,date,val
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-16,363843.0,-163.0,-0.27846373530596713,1.2971067753574816,%,,365412.7,-1.2333223961666369,Normal,Queda
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-17,364074.0,231.0,-0.2151516065110104,1.4755560510619325,%,,365348.95238095237,-1.0003965517346627,Normal,Queda
 13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-18,363644.0,-430.0,-0.205547307440046,1.352598030608343,%,,365313.28571428574,-1.271883226399938,Normal,Queda
+13621,reservas,Reservas internacionais,US$ milhões,stock,daily,0,2026-11-19,363058.0,-586.0,-0.4322142202866419,1.1844774921406342,%,,365238.2380952381,-1.5621580316034744,Normal,Queda
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-11-01,73.32,,,,p.p.,,,,,
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2023-12-01,73.83,0.5100000000000051,0.5100000000000051,,p.p.,,,,,Alta
 13762,divida_bruta,Dívida bruta do governo geral,% do PIB,level_pct,monthly,1,2024-01-01,74.47,0.6400000000000006,0.6400000000000006,,p.p.,,,,,Alta
