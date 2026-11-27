@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T01:36:27.932227",
+  "generated_at": "2026-11-27T11:56:29.093524",
   "source": "data-pipeline-estudo",
   "tables": {
     "clima_diario": {
@@ -21,8 +21,8 @@
         }
       ],
       "date_range": {
-        "min": "2026-11-25 00:00:00",
-        "max": "2026-11-27 00:00:00"
+        "min": "2026-11-26 00:00:00",
+        "max": "2026-11-28 00:00:00"
       }
     },
     "clima_horario": {
@@ -44,8 +44,54 @@
         }
       ],
       "date_range": {
-        "min": "2026-11-25 00:00:00",
-        "max": "2026-11-27 23:00:00"
+        "min": "2026-11-26 00:00:00",
+        "max": "2026-11-28 23:00:00"
+      }
+    },
+    "crypto_market": {
+      "name": "crypto_market",
+      "row_count": 14,
+      "column_count": 30,
+      "columns": [
+        {
+          "name": "coin_id",
+          "type": "object",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            "binancecoin",
+            "binancecoin",
+            "bitcoin"
+          ],
+          "unique_count": 7
+        }
+      ],
+      "date_range": {
+        "min": "2026-11-27 11:54:50.101403",
+        "max": "2026-11-27 11:54:50.101403"
+      }
+    },
+    "crypto_historico": {
+      "name": "crypto_historico",
+      "row_count": 120,
+      "column_count": 7,
+      "columns": [
+        {
+          "name": "coin_id",
+          "type": "object",
+          "nullable": "False",
+          "null_percentage": 0.0,
+          "sample_values": [
+            "binancecoin",
+            "binancecoin",
+            "binancecoin"
+          ],
+          "unique_count": 4
+        }
+      ],
+      "date_range": {
+        "min": "2026-10-29 00:00:00",
+        "max": "2026-11-27 11:54:00"
       }
     },
     "economia_diario": {
